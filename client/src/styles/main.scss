@@ -1,7 +1,9 @@
 $primary-font: 'BrownStd-Regular', sans-serif;
-$secondary-font: 'Portrait-MediumItalic' sans-serif;
+$secondary-font: 'Portrait-MediumItalic', sans-serif;
 $main-text-color: white;
 $secondary-text-color: rgb(29, 149, 165);
+$input-button-color: rgb(39, 117, 128);
+$header-icon-color: rgba(238, 238, 238, 0.568);
 
 @font-face {
   font-family: 'BrownStd-Regular';
@@ -11,6 +13,7 @@ $secondary-text-color: rgb(29, 149, 165);
 @font-face {
   font-family: 'Portrait-MediumItalic';
   src: url(../assets/fonts/Portrait-MediumItalic.woff) format('woff');
+  font-display: fallback;
 }
 
 html {
@@ -62,7 +65,7 @@ body {
   font-size: 18px;
   border-radius: 3px;
   border: none;
-  font-family: 'Portrait-MediumItalic', sans-serif;
+  font-family: $secondary-font;
   padding-top: 4px;
   padding-left: 10px;
   padding-right: 110px;
@@ -72,7 +75,7 @@ body {
 .input-btn {
   height: 40px;
   width: 100px;
-  background: rgb(39, 117, 128);
+  background: $input-button-color;
   color: $main-text-color;
   border: none;
   border-radius: 3px;
@@ -98,7 +101,7 @@ body {
   height: 40px;
   width: 90px;
   margin: 25px 40px;
-  background: rgba(238, 238, 238, 0.568);
+  background: $header-icon-color;
 
   border: none;
   border-radius: 14px;

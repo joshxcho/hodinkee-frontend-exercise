@@ -6,6 +6,7 @@
 @font-face {
   font-family: 'Portrait-MediumItalic';
   src: url(../assets/fonts/Portrait-MediumItalic.woff) format("woff");
+  font-display: fallback;
 }
 
 html {
@@ -66,7 +67,7 @@ body {
   font-size: 18px;
   border-radius: 3px;
   border: none;
-  font-family: 'Portrait-MediumItalic', sans-serif;
+  font-family: "Portrait-MediumItalic", sans-serif;
   padding-top: 4px;
   padding-left: 10px;
   padding-right: 110px;
