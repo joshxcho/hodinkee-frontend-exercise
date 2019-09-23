@@ -1,4 +1,5 @@
 import React from 'react';
+import EmailForm from './EmailForm';
 import Logo from '../assets/logo/logo.png';
 
 const Content = () => (
@@ -8,6 +9,7 @@ const Content = () => (
         <img src={Logo} alt="logo" />
       </div>
       <div className="content-date">Coming 06.26.19</div>
+      <EmailForm />
     </div>
   </div>
 );
