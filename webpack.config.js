@@ -1,7 +1,7 @@
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: `${__dirname}/client/src/index.jsx`,
   output: {
     filename: 'bundle.js',
@@ -44,9 +44,7 @@ module.exports = {
           options: {
             limit: 50000,
             mimetype: 'application/font-woff',
-            name:
-              './client/src/assets/BrownStd-Regular.woff'
-              && './client/src/assets/Portrait-MediumItalic.woff',
+            name: './client/src/assets/fonts/[name].[ext]',
           },
         },
       },
@@ -62,7 +60,9 @@ module.exports = {
         parallel: true,
         sourceMap: true,
         terserOptions: {
-          // https://github.com/webpack-contrib/terser-webpack-plugin#terseroptions
+          compress: {
+            dead_code: true,
+          },
         },
       }),
     ],
