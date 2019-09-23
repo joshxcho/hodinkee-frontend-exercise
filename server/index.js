@@ -1,10 +1,13 @@
 const express = require('express');
+const compression = require('compression');
 
 const config = require('../config');
 
 const app = express();
 
 app.set('port', config.port);
+
+app.use(compression());
 
 app.use(express.static('public/'));
 app.use(express.static('client/dist'));
