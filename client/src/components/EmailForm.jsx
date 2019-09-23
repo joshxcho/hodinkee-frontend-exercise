@@ -6,20 +6,24 @@ export default class EmailForm extends Component {
 
     this.state = {
       email: '',
+      formSubmitted: false,
     };
   }
 
-  handleChange = e => {
+  handleChange = (e) => {
     const { value } = e.target;
     this.setState({ email: value });
   };
 
-  handleSubmit = e => {
+  handleSubmit = (e) => {
     e.preventDefault();
+
+    this.setState({ formSubmitted: true });
   };
 
   render() {
-    return (
+    const { formSubmitted } = this.state;
+    return formSubmitted === false ? (
       <form className="form" onSubmit={this.handleSubmit}>
         <input
           className="input-form"
@@ -32,6 +36,8 @@ export default class EmailForm extends Component {
 
         <input className="input-btn" type="submit" value="NOTIFY ME" />
       </form>
+    ) : (
+      <div className="post-message">Thank you for your interest!</div>
     );
   }
 }
