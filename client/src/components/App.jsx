@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Headers from './Headers';
 import Content from './Content';
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        <Headers />
-        <Content />
-      </div>
-    );
-  }
-}
+const App = () => (
+  <React.Fragment>
+    <Headers />
+    <Content />
+  </React.Fragment>
+);
+export default App;
