@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import Headers from './Headers';
 
 export default class App extends Component {
   render() {
     return (
-      <h1>
-Hello World!
-      </h1>
+      <div>
+        <Headers />
+      </div>
     );
   }
 }
