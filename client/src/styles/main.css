@@ -25,15 +25,12 @@ body {
   font-family: "BrownStd-Regular", sans-serif;
 }
 
-.main-container {
+.content-container {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-}
-
-.main-container div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,6 +38,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: 20px;
+  min-width: 300px;
+  min-height: 210px;
 }
 
 .logo {
@@ -49,6 +49,11 @@ body {
 
 .logo img {
   width: 100%;
+}
+
+.content-date {
+  margin: 10px;
+  color: #1d95a5;
 }
 
 .form {
@@ -84,12 +89,7 @@ body {
 }
 
 .post-message {
-  margin-top: 20px;
-}
-
-.content-date {
-  margin: 10px;
-  color: #1d95a5;
+  margin-top: 30px;
 }
 
 .headers-container {

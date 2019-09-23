@@ -27,15 +27,17 @@ body {
   font-family: $primary-font;
 }
 
-.main-container {
+.content-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  div {
-    display: flex;
-    flex-direction: column;
-  }
+
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  min-width: 300px;
+  min-height: 210px;
 }
 
 .logo {
@@ -43,6 +45,11 @@ body {
   img {
     width: 100%;
   }
+}
+
+.content-date {
+  margin: 10px;
+  color: $secondary-text-color;
 }
 
 .form {
@@ -79,12 +86,7 @@ body {
 }
 
 .post-message {
-  margin-top: 20px;
-}
-
-.content-date {
-  margin: 10px;
-  color: $secondary-text-color;
+  margin-top: 30px;
 }
 
 .headers-container {
